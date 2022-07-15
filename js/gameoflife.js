@@ -11,7 +11,13 @@ function contains(cell) {
   return this.some((c) => same(c, cell));
 }
 
-const printCell = (cell, state) => {};
+const printCell = (cell, state) => {
+  const isCellAlive = state.contains.call(cell)
+  if (isCellAlive) {
+    return '\u25A3'
+  }
+  return '\u25A2'
+};
 
 const corners = (state = []) => {};
 
