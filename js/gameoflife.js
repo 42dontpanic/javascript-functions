@@ -12,7 +12,7 @@ function contains(cell) {
 }
 
 const printCell = (cell, state) => {
-  const isCellAlive = state.contains(cell)
+  const isCellAlive = contains.call(state, cell)
   if (isCellAlive) {
     return '\u25A3'
   }
